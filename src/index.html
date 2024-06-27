@@ -4,15 +4,67 @@
     <meta charset="UTF-8" />
     <title>Voting Ballot - 2025 | YBPS</title>
     <link rel="stylesheet" href="index.css" />
+<!-- Firebase version 8 -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<!-- Add other Firebase services as needed -->
+
+<!-- Other Firebase services like authentication, storage, etc., can be added similarly -->
+    
   </head>
   <body>
     <h1>💖 Hello World!</h1>
     <p>Welcome to your Electron application.</p>
+
+    <form onsubmit="handleSubmit(event)">
+      <label for="userName">Username:</label>
+      <input type="text" id="userName" name="userName" required><br><br>
+  
+      <label for="userPass">Password:</label>
+      <input type="password" id="userPass" name="userPass" required><br><br>
+  
+      <button type="submit">Login</button>
+    </form>
+
+
+
     <script>
       // Disable right-click context menu
       window.addEventListener('contextmenu', (e) => {
         e.preventDefault();
       });
     </script>
+
+
+
+
+
+
+
+
+
+    <!-- <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBHz3SdCdLWpPZHHtT5LppL44faM-94AiM",
+        authDomain: "vote-ballot.firebaseapp.com",
+        projectId: "vote-ballot",
+        storageBucket: "vote-ballot.appspot.com",
+        messagingSenderId: "471438619978",
+        appId: "1:471438619978:web:bf6197b3177b823664fdb3"
+      };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+      db.settings( { timestampInSnapshots: true } );
+    </script> -->
+    <script src="firebase.js"></script>
+
   </body>
 </html>
